@@ -1,0 +1,42 @@
+﻿<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<div id='display'>
+<img src="" id="number1">
+</div>
+
+<script>
+var picture = ["C:/Users/DI%20HU/Documents/GitHub/Jo/jomalone.jpg","F:/PICTURES/莫道不消魂/12.jpg","F:/PICTURES/食物/38.jpg","F:/PICTURES/莫道不消魂/额饰/0ad20b4489f7df496a63e520.jpg"];
+
+var pictureNum = 0
+// function rotate(){
+	
+// 	if( pictureNum==picture.length-1)  {
+// 		pictureNum = 0;
+// 		document.getElementById('number1').src= picture[pictureNum]}
+// 	else
+// 		{	pictureNum+=1
+// 			console.log("rotate_else",pictureNum)
+// 		document.getElementById('number1').src= picture[pictureNum]
+// 	}	
+// }
+function rotate(){
+	$("#number1").attr("src",picture[pictureNum++])
+	if(pictureNum>=picture.length){
+		pictureNum =0
+	}
+	// if(pictureNum<picture.length){
+	// 	// $("#number1").attr("src",picture[pictureNum])
+	// 	// pictureNum++;
+	// }
+	// else{
+	// pictureNum =0;
+	// 	$("#number1").attr("src",picture[pictureNum])
+	// 		pictureNum++
+	// }
+}
+$(document).ready(function(){
+
+   setInterval(rotate,2000);
+
+});
+
+</script>
